@@ -157,7 +157,7 @@ position: absolute;
 {
 width:304px;
     }
-#tc_post_perma .splitter_line{width:700px; max-width:100%;}
+#tc_post_perma .splitter_line{width:700px;}
 .highlight .splitter_line{width:630px;}
 #tc_post_perma .caption
 {
@@ -765,8 +765,9 @@ margin-right:20px;
 .caption img{
     margin:0px auto;
     height:auto;
-    max-width: 100%;
-    {block:IndexPage}           
+    {block:IndexPage}
+
+            max-width: 100%;
             width:expression(document.body.clientWidth > 284? "284px": "auto" );
     {/block:IndexPage}
     
@@ -1939,6 +1940,11 @@ font-weight:normal;
     }
 }
 
+.like_button iframe.like_toggle {
+    position: relative;
+    top: 10px;
+}
+
 </style>
 <style>
 @import url(http://surface.tcs3.co.uk/themes/surface/override.css);
@@ -2070,9 +2076,11 @@ font-weight:normal;
                 
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
+                {LikeButton size="14"}
+                <!--div style="margin-top:9px;" class="heart_icon2">
+                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a>
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                </div-->
                     
                     
                 </div>
@@ -2158,8 +2166,7 @@ font-weight:normal;
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                {LikeButton size="14"}
                     
                     
                 </div>
@@ -2240,8 +2247,7 @@ font-weight:normal;
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                {LikeButton size="14"}
                     
                     
                 </div>
@@ -2348,8 +2354,7 @@ font-weight:normal;
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                {LikeButton size="14"}
                     
                     
                 </div>
@@ -2468,8 +2473,7 @@ font-weight:normal;
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                {LikeButton size="14"}
                     
                     
                 </div>
@@ -2557,8 +2561,7 @@ font-weight:normal;
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                {LikeButton size="14"}
                     
                     
                 </div>
@@ -2651,8 +2654,7 @@ font-weight:normal;
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                {LikeButton size="14"}
                     
                     
                 </div>
@@ -2778,8 +2780,7 @@ font-weight:normal;
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                {LikeButton size="14"}
                     
                     
                 </div>
@@ -2886,8 +2887,7 @@ font-weight:normal;
                 
                 <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
                 
-                <div style="margin-top:9px;" class="heart_icon2">
-                <a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a></div>
+                {LikeButton size="14"}
                     
                     
                 </div>

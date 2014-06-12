@@ -1962,12 +1962,12 @@ font-weight:normal;
         <div class="top_menu">
         <div id="nav">
 
-        <a class="various3" href="/random">RANDOM</a>
+        {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
         {block:AskEnabled}<a class="various3" href="/ask">MESSAGE</a>{/block:AskEnabled}
+        <a class="various3" href="/random">RANDOM</a>
         {block:SubmissionsEnabled}<a href="/submit">SUBMIT</a> {/block:SubmissionsEnabled}
 
         {block:ifarchivelink}<a href="/archive">ARCHIVE</a>{/block:ifarchivelink} 
-        {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
 
 
         </div>

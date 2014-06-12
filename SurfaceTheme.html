@@ -104,7 +104,7 @@ o.  )88b  888   888   888      888   d8(  888  888   .o8 888    .o
 <link rel="icon" href="{PortraitURL-16}" type="image/vnd.microsoft.icon" />
 
 <!--link rel="stylesheet" href="http://static.tumblr.com/ssdtkch/47bmfqrsj/core.css"-->
-<link rel="stylesheet" href="http://static.tumblr.com/vyvljow/fDPmogr80/core-edit.css">
+<link rel="stylesheet" href="http://static.tumblr.com/vyvljow/kFVmzulbe/core-edit.css">
 <link rel="stylesheet" href="http://static.tumblr.com/ssdtkch/BRqmfqrru/surface.css">
 <link rel="stylesheet" href="http://static.tumblr.com/ssdtkch/UNNmfqrtd/perma.css">
 
@@ -288,7 +288,7 @@ color:#FFFFFF;
 
 /* LITTLE VINCE EDIT */
 {block:IfFullBackgroundImage}
-#tc_posts_container, html {
+body {
     background: url({image:FullBackground}) no-repeat center center fixed !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -341,10 +341,6 @@ margin-bottom:40px;
     left:0;
     display:none;
     }
-    #purchase_theme2
-    {
-        top:20px !important;
-        }
     a.btn{
     position:fixed;
     z-index:9;
@@ -1795,8 +1791,6 @@ ol.notes li.tumblelog_{Name}, ol.notes li.tumblelog_{Name} a {
     color:{color:post title} !important;
 }
 
-iframe#tumblr_controls{right:115px !important;}
-
 .social_icons{opacity:1 !important;}
 .answer_form_container iframe
 {
@@ -1821,9 +1815,6 @@ margin-left: -21px;
 z-index:300 !Important;    
 }
 a.btn {
- z-index:301 !important;   
-}
-#tumblr_controls {
  z-index:301 !important;   
 }
 {/block:iffixheader}
@@ -3015,7 +3006,8 @@ font-weight:normal;
 {/block:PermalinkPage}
 
 <script src="http://static.tumblr.com/2w7y46r/ZObmh4jf0/jquery-1.8.3.js"></script>
-<script src="http://static.tumblr.com/ssdtkch/Vsimfqnrq/surface.min.tumblr.js"></script>
+<!--script src="http://static.tumblr.com/ssdtkch/Vsimfqnrq/surface.min.tumblr.js"></script-->
+<script src="http://static.tumblr.com/vyvljow/BUYmzui5z/surface.min.tumblr-edit.js"></script>
 <script src="http://static.tumblr.com/flr59he/QGllzqmy8/jquery.imagesloaded.min.js"></script>
 
 <script src="http://cufon.shoqolate.com/js/cufon-yui.js" type="text/javascript"></script>
@@ -3166,29 +3158,11 @@ $(function(){
     if($('.tc_posts.highlight.done').length){highLightPost();}
     if($('.photoSet.done').length){repairPhotoset();}
     
-        
-    /* like 2 */
-    $(".heart_icon2").live("click", function(){
-    
-    var $this = $(this);
-        var id_post = $this.attr('id');
-        
-        var reblog_key = $this.attr('rel').slice(-8);
-        var like_url = 'http://www.tumblr.com/like/'+reblog_key+'?id='+id_post;
-       
-        $('#likeIframe').attr('src', like_url);
-        $this.css('color','#c4302b !important');
-    });
     });
 var CurrentLoction = "";
 var CurrentSrc ="";
 var CheckScroll ="";
-var CurrentScroll ="";
-var CurrentCtrls = ""
 var bPopped = false;
-function keyUpFunc(e) {
-  if (e.keyCode == 27) { CloseDarkBox(); }
-}
 
 function PopPerma(sHref,sPostSrc,sPostID,sReblogKey)
 {
@@ -3203,14 +3177,6 @@ $(document).keyup(keyUpFunc);
     {
     CurrentLoction = window.location.href;
     }
-    if (CurrentSrc == "")
-    {
-    CurrentSrc = $("#tumblr_controls").attr("src");
-    }
-     if (CurrentCtrls == "")
-    {
-    CurrentCtrls = $("#tumblr_controls").css("right");
-    }
    
    sReblogKey = sReblogKey.replace("http://","");
     var sArray = sReblogKey.split("/");
@@ -3221,22 +3187,6 @@ $(document).keyup(keyUpFunc);
     $("#lightbox_perma").css("top",20 + parseInt($(window).scrollTop()) + "px");
          iTop = 20 + parseInt($(window).scrollTop());
    
-    
-   
-   
-    $("#lightbox_perma").load(sHref + " #tc_post_perma", function() {
-  $('#lightbox_perma').fadeIn();
-  if($('.audioplayerinto.done').length){repairAudioPlayer();}
-  var sBottom = parseInt($("#lightbox_perma").css("height").replace("px","")) + iTop;
-  CheckScroll = true;
-
-   $("#tumblr_controls").attr("src","http://assets.tumblr.com/iframe.html?10&src=" + sPostSrc + "&pid="+ sPostID +"&rk=" + sReblogKey)
-   $("#tumblr_controls").css("right","30px !important;");
-   
-   var t=setTimeout(function(){$("#tumblr_controls").attr("style","position:absolute; z-index:1337 !important; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;")},500)
-   
- window.history.pushState({}, '{Title}'.replace("'",""), sHref)
-});
 
 $("#perma_controls_display").load(sHref + " #perma_controls", function() {
     
@@ -3244,25 +3194,6 @@ $("#perma_controls_display").load(sHref + " #perma_controls", function() {
 });
     
 
-
-    
-}
-function CloseDarkBox()
-{
-   $(document).unbind("keyup", keyUpFunc);
-$("#tumblr_controls").css("right",CurrentCtrls);
-    $("#tumblr_controls").attr("src",CurrentSrc);
-    
-    $("#tumblr_controls").attr("style","position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;");
-  
-    window.history.pushState({}, '{Title}', CurrentLoction)
-    CurrentLoction = "";
-    CurrentSrc = ""
-    $(window).scrollTop(CurrentScroll);
-
-  $('#perma_controls_display').fadeOut();
-    $('#lightbox_perma').fadeOut();    
-$('#darkbox').fadeOut();
 }
 
 function highLightPost(){
@@ -3420,17 +3351,7 @@ ChangePostsCont()
 
 </script>
 
-
-
-
-
-<div id="lightbox_perma" style="margin-bottom:20px;">
-
-</div>
-<div id="darkbox" onclick="CloseDarkBox()">
-</div>
 <div id="guid" style="display:none;">45e1d44587-djke882-448210shyya0-dopwnn1</div>
-<iframe id="likeIframe" src="" style="width:1px;height:1px;position:absolute;left:-9999px;"></iframe>
 
 {block:ifanalyticstrackingid}
 <script type="text/javascript">
@@ -3447,9 +3368,5 @@ ChangePostsCont()
 
 </script>
 {/block:ifanalyticstrackingid}
-<script type="text/javascript" src="http://static.tumblr.com/vyvljow/Mslmo87an/jquery.scrolldepth.min.js"></script>
-<script>
-    $.scrollDepth();
-</script>
 </body>
 </html>

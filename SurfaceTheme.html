@@ -58,6 +58,8 @@ o.  )88b  888   888   888      888   d8(  888  888   .o8 888    .o
 <meta name="if:Show Post Controls" content="1"/>
 <meta name="if:Show Note Count" content="1"/>
 <meta name="if:Show Tags" content="0"/>
+<meta name="if:Show Tags On Permalink Only" content="1"/> <!-- LITTLE VINCE EDIT-->
+<meta name="if:Show Asker Icon" content="1" />
 <meta name="if:Shadows" content="1"/>
 <meta name="if:Show Search" content="1"/>
 
@@ -171,7 +173,7 @@ width:304px;
 .highlight .splitter_line{width:630px;}
 #tc_post_perma .caption
 {
-    margin-bottom:20px;
+     /* margin-bottom:20px; */
      margin-top:20px;
     }
 #tc_post_perma blockquote
@@ -193,7 +195,7 @@ width:304px;
 {
     display:none;
     }
-{block:permalinkpage}
+{/block:permalinkpage}
 
 .social_icons{
     color:{color:header links} !important;
@@ -1833,7 +1835,20 @@ a.btn {
 text-transform: lowercase;
 margin:0px 15px 15px 15px;
 margin-bottom:10px;
+
+{block:IfShowTagsOnPermalinkOnly}
+
+    display: none;
+
+
+{block:PermalinkPage}
+    display: block !important;
+{/block:PermalinkPage}
+
+{block:IfShowTagsOnPermalinkOnly}
+
 }
+
 
 .post_tags_photo a
 {
@@ -2111,17 +2126,17 @@ font-weight:normal;
 
 
 {block:Answer}
-    <div class="padding-title" style="padding-top:5px;">
-    <div class="askerIcon" style="padding:0;padding-left:12px;padding-top: 10px;margin-bottom:0;">
+    <div class="padding-title" style="padding:15px 0;">
+    <div class="askerIcon" style="padding:0;padding-left:12px;margin-bottom:0;">
+            {block:IfShowAskerIcon}<img src="{AskerPortraitURL-16}" />{/block:IfShowAskerIcon}
              <span><i>{Asker} said</i></span>
         </div>
         <h2 class="title" style="padding-top:0 !important;"><a href="{Permalink}" class="linkTitle">{Question}</a></h2>
     </div>
+    <div class="splitter_line" style="border-top:1px solid {color:post controls border}"></div>
     <div class="padding">
         
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};  margin-left:-15px;"></div>
-        
-        <div class="caption" style="padding-top:15px;">
+        <div class="caption" >
             {Answer}
         </div>
         

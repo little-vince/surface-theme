@@ -2054,74 +2054,6 @@ font-weight:normal;
         </div>
     {/block:Title}
     <div class="caption padding">{Body}</div>
-     {block:IfShowTags}
-        
-        {block:HasTags}
-        <div class="post_tags_photo">
-                    
-                        {block:Tags}
-                            
-                                <a href="{TagURL}">#{Tag}</a>  
-                            
-                        {/block:Tags}
-                  
-                    </div>
-                {/block:HasTags}
-        
-        {/block:IfShowTags}
-    {block:IndexPage}
-         
-        {block:ifShowPostControls}
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
-        <div class="permalink_links2">
-            <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
-            
-            <div class="right">
-                <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
-                
-                <div style="margin-top:9px">
-                
-                <a target="_blank" title="{NoteCountWithLabel}" class="pictos reblog_icon2" style="font-size:14px;font-weight:500;" href="{ReblogURL}">1</a></div></div>
-                
-                
-                <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
-                
-                <div style="margin-top:11px;" class="heart_icon2">
-                {LikeButton color="grey" size="14"}
-                <!--a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a--></div>
-                    
-                    
-                </div>
-                
-                
-                
-                <div class="pictos" style="font-weight:normal; font-size:14px;float:left;width:35px;height:38px;border-left:1px solid {color:post controls border};text-align:center;">
-                <div style="margin-top:9px;cursor:pointer;" class="share"><a style="font-size:14px;font-weight:500;"  target="_blank">&</a>     
-                <div class="sharethis">
-                <div class="share_short">
-                <a href="{ShortURL}">{ShortURL}</a>
-                </div>
-                <a href="http://pinterest.com/pin/create/button/?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div class="share_pin share_block">l</div></a>
-                
-                <a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"  href="http://www.facebook.com/share.php?u=\{Permalink}"><div class="share_fb share_block">f</div></a>
-                
-                
-                                            <a  href="http://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="share_twit share_block">l</div></a>
-                                            
-                                    <a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">        <div class="share_ggl share_block">g</div></a>
-                                        </div>
-                
-                
-                </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        {/block:ifShowPostControls}
-        
-    {/block:IndexPage}
 {/block:Text}
 
 
@@ -2141,80 +2073,7 @@ font-weight:normal;
         </div>
         
     </div>
-     {block:IfShowTags}
-        
-        {block:HasTags}
-        <div class="post_tags_photo">
-                    
-                        {block:Tags}
-                            
-                                <a href="{TagURL}">#{Tag}</a>  
-                            
-                        {/block:Tags}
-                  
-                    </div>
-                {/block:HasTags}
-        
-        {/block:IfShowTags}
-    {block:IndexPage}
-    
-    
-        {block:ifShowPostControls}
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
-        <div class="permalink_links2">
-            <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
-            
-            <div class="right">
-                <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
-                
-                <div style="margin-top:9px">
-                
-                <a target="_blank" title="{NoteCountWithLabel}" class="pictos reblog_icon2" style="font-size:14px;font-weight:500;" href="{ReblogURL}">1</a></div></div>
-                
-                
-                <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
-                
-                <div style="margin-top:11px;" class="heart_icon2">
-                {LikeButton color="grey" size="14"}
-                <!--a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a--></div>
-                    
-                    
-                </div>
-                
-                
-                
-                <div class="pictos" style="font-weight:normal; font-size:14px;float:left;width:35px;height:38px;border-left:1px solid {color:post controls border};text-align:center;">
-                <div style="margin-top:9px;cursor:pointer;" class="share"><a style="font-size:14px;font-weight:500;"  target="_blank">&</a>     
-                <div class="sharethis">
-                <div class="share_short">
-                <a href="{ShortURL}">{ShortURL}</a>
-                </div>
-                <a href="http://pinterest.com/pin/create/button/?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div class="share_pin share_block">l</div></a>
-                
-                <a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"  href="http://www.facebook.com/share.php?u=\{Permalink}"><div class="share_fb share_block">f</div></a>
-                
-                
-                                            <a  href="http://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="share_twit share_block">l</div></a>
-                                            
-                                    <a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">        <div class="share_ggl share_block">g</div></a>
-                                        </div>
-                
-                
-                </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        {/block:ifShowPostControls}
-        
-    {/block:IndexPage}
 {/block:Answer}
-
-
-
-
 
 
 {block:Link}
@@ -2224,81 +2083,7 @@ font-weight:normal;
         </h2>
     </div>
     <div class="caption padding">{Description}</div>
-     {block:IfShowTags}
-        
-        {block:HasTags}
-        <div class="post_tags_photo">
-                    
-                        {block:Tags}
-                            
-                                <a href="{TagURL}">#{Tag}</a>  
-                            
-                        {/block:Tags}
-                  
-                    </div>
-                {/block:HasTags}
-        
-        {/block:IfShowTags}
-    
-    {block:IndexPage}
-    
-        {block:ifShowPostControls}
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
-        <div class="permalink_links2">
-            <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
-            
-            <div class="right">
-                <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
-                
-                <div style="margin-top:9px">
-                
-                <a target="_blank" title="{NoteCountWithLabel}" class="pictos reblog_icon2" style="font-size:14px;font-weight:500;" href="{ReblogURL}">1</a></div></div>
-                
-                
-                <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
-                
-                <div style="margin-top:11px;" class="heart_icon2">
-                {LikeButton color="grey" size="14"}
-                <!--a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a--></div>
-                    
-                    
-                </div>
-                
-                
-                
-                <div class="pictos" style="font-weight:normal; font-size:14px;float:left;width:35px;height:38px;border-left:1px solid {color:post controls border};text-align:center;">
-                <div style="margin-top:9px;cursor:pointer;" class="share"><a style="font-size:14px;font-weight:500;"  target="_blank">&</a>     
-                <div class="sharethis">
-                <div class="share_short">
-                <a href="{ShortURL}">{ShortURL}</a>
-                </div>
-                <a href="http://pinterest.com/pin/create/button/?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div class="share_pin share_block">l</div></a>
-                
-                <a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"  href="http://www.facebook.com/share.php?u=\{Permalink}"><div class="share_fb share_block">f</div></a>
-                
-                
-                                            <a  href="http://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="share_twit share_block">l</div></a>
-                                            
-                                    <a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">        <div class="share_ggl share_block">g</div></a>
-                                        </div>
-                
-                
-                </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        {/block:ifShowPostControls}
-        
-    {/block:IndexPage}
 {block:Link}
-
-
-
-
-
 
 
 {block:Photo}
@@ -2350,80 +2135,6 @@ font-weight:normal;
                 </div>
             {/block:Caption}
         {/block:IfShowcaptionsonhomepage}
-    {/block:IndexPage}    
-        {block:IfShowTags}
-        
-        {block:HasTags}
-        <div class="post_tags_photo">
-                    
-                        {block:Tags}
-                            
-                                <a href="{TagURL}">#{Tag}</a>  
-                            
-                        {/block:Tags}
-                  
-                    </div>
-                {/block:HasTags}
-        
-        {/block:IfShowTags}
-        
-       {block:IndexPage} 
-        
-        {block:ifShowPostControls}
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
-        <div class="permalink_links2">
-            <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
-            
-            <div class="right">
-                <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
-                
-                <div style="margin-top:9px">
-                
-                <a target="_blank" title="{NoteCountWithLabel}" class="pictos reblog_icon2" style="font-size:14px;font-weight:500;" href="{ReblogURL}">1</a></div></div>
-                
-                
-                <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
-
-                <div style="margin-top:11px;" class="heart_icon2">
-                {LikeButton color="grey" size="14"}
-                <!--a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a--></div>
-                    
-                    
-                </div>
-                
-                
-                
-                <div class="pictos" style="font-weight:normal; font-size:14px;float:left;width:35px;height:38px;border-left:1px solid {color:post controls border};text-align:center;">
-                <div style="margin-top:9px;cursor:pointer;" class="share"><a style="font-size:14px;font-weight:500;"  target="_blank">&</a>     
-                <div class="sharethis">
-                <div class="share_short">
-                <a href="{ShortURL}">{ShortURL}</a>
-                </div>
-                <a href="http://pinterest.com/pin/create/button/?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div class="share_pin share_block">l</div></a>
-                
-                <a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"  href="http://www.facebook.com/share.php?u=\{Permalink}"><div class="share_fb share_block">f</div></a>
-                
-                
-                                            <a  href="http://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="share_twit share_block">l</div></a>
-                                            
-                                    <a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">        <div class="share_ggl share_block">g</div></a>
-                                        </div>
-                
-                
-                </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        {/block:ifShowPostControls}
-        
-        
-        
-        
-        
-        
     {/block:IndexPage}
     {block:PermalinkPage}
     
@@ -2435,11 +2146,6 @@ font-weight:normal;
         
     {/block:PermalinkPage}
 {/block:Photo}
-
-
-
-
-
 
 
 {block:Photoset}
@@ -2471,82 +2177,8 @@ font-weight:normal;
                 </div>
             {/block:Caption}
         {/block:IfShowcaptionsonhomepage}
-        {/block:IndexPage}    
-        {block:IfShowTags}
-        
-        {block:HasTags}
-        <div class="post_tags_photo">
-                    
-                        {block:Tags}
-                            
-                                <a href="{TagURL}">#{Tag}</a>  
-                            
-                        {/block:Tags}
-                  
-                    </div>
-                {/block:HasTags}
-        
-        {/block:IfShowTags}
-        
-       {block:IndexPage}    
-     
-        {block:ifShowPostControls}
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
-        <div class="permalink_links2">
-            <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
-            
-            <div class="right">
-                <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
-                
-                <div style="margin-top:9px">
-                
-                <a target="_blank" title="{NoteCountWithLabel}" class="pictos reblog_icon2" style="font-size:14px;font-weight:500;" href="{ReblogURL}">1</a></div></div>
-                
-                
-                <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
-                
-                <div style="margin-top:11px;" class="heart_icon2">
-                {LikeButton color="grey" size="14"}
-                <!--a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a--></div>
-                    
-                    
-                </div>
-                
-                
-                
-                <div class="pictos" style="font-weight:normal; font-size:14px;float:left;width:35px;height:38px;border-left:1px solid {color:post controls border};text-align:center;">
-                <div style="margin-top:9px;cursor:pointer;" class="share"><a style="font-size:14px;font-weight:500;"  target="_blank">&</a>     
-                <div class="sharethis">
-                <div class="share_short">
-                <a href="{ShortURL}">{ShortURL}</a>
-                </div>
-                <a href="http://pinterest.com/pin/create/button/?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div class="share_pin share_block">l</div></a>
-                
-                <a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"  href="http://www.facebook.com/share.php?u=\{Permalink}"><div class="share_fb share_block">f</div></a>
-                
-                
-                                            <a  href="http://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="share_twit share_block">l</div></a>
-                                            
-                                    <a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">        <div class="share_ggl share_block">g</div></a>
-                                        </div>
-                
-                
-                </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        {/block:ifShowPostControls}
-        
-    {/block:IndexPage}
+        {/block:IndexPage}
 {/block:Photoset}
-
-
-
-
-
 
 
 {block:Quote}
@@ -2562,79 +2194,7 @@ font-weight:normal;
         <span class="quote_icon quoteIcon1 left">"</span><i><b> {Source}</b></i>
     {/block:Source}
 </div>
- {block:IfShowTags}
-        
-        {block:HasTags}
-        <div class="post_tags_photo">
-                    
-                        {block:Tags}
-                            
-                                <a href="{TagURL}">#{Tag}</a>  
-                            
-                        {/block:Tags}
-                  
-                    </div>
-                {/block:HasTags}
-        
-        {/block:IfShowTags}
-
-    {block:IndexPage}
-     
-        {block:ifShowPostControls}
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
-        <div class="permalink_links2">
-            <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
-            
-            <div class="right">
-                <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
-                
-                <div style="margin-top:9px">
-                
-                <a target="_blank" title="{NoteCountWithLabel}" class="pictos reblog_icon2" style="font-size:14px;font-weight:500;" href="{ReblogURL}">1</a></div></div>
-                
-                <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
-                
-                <div style="margin-top:11px;" class="heart_icon2">
-                {LikeButton color="grey" size="14"}
-                <!--a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a--></div>
-                    
-                    
-                </div>
-                
-                
-                
-                <div class="pictos" style="font-weight:normal; font-size:14px;float:left;width:35px;height:38px;border-left:1px solid {color:post controls border};text-align:center;">
-                <div style="margin-top:9px;cursor:pointer;" class="share"><a style="font-size:14px;font-weight:500;"  target="_blank">&</a>     
-                <div class="sharethis">
-                <div class="share_short">
-                <a href="{ShortURL}">{ShortURL}</a>
-                </div>
-                <a href="http://pinterest.com/pin/create/button/?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div class="share_pin share_block">l</div></a>
-                
-                <a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"  href="http://www.facebook.com/share.php?u=\{Permalink}"><div class="share_fb share_block">f</div></a>
-                
-                
-                                            <a  href="http://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="share_twit share_block">l</div></a>
-                                            
-                                    <a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">        <div class="share_ggl share_block">g</div></a>
-                                        </div>
-                
-                
-                </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        {/block:ifShowPostControls}
-        
-    {/block:IndexPage}
 {/block:Quote}
-
-
-
-
 
 
 {block:Chat}
@@ -2657,79 +2217,7 @@ font-weight:normal;
             {/block:Lines}
         </ul>
     </div>
- {block:IfShowTags}
-        
-        {block:HasTags}
-        <div class="post_tags_photo">
-                    
-                        {block:Tags}
-                            
-                                <a href="{TagURL}">#{Tag}</a>  
-                            
-                        {/block:Tags}
-                  
-                    </div>
-                {/block:HasTags}
-        
-        {/block:IfShowTags}
-    {block:IndexPage}
-         
-        {block:ifShowPostControls}
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
-        <div class="permalink_links2">
-            <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
-            
-            <div class="right">
-                <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
-                
-                <div style="margin-top:9px">
-                
-                <a target="_blank" title="{NoteCountWithLabel}" class="pictos reblog_icon2" style="font-size:14px;font-weight:500;" href="{ReblogURL}">1</a></div></div>
-                
-                
-                <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
-                
-                <div style="margin-top:11px;" class="heart_icon2">
-                {LikeButton color="grey" size="14"}
-                <!--a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a--></div>
-                    
-                    
-                </div>
-                
-                
-                
-                <div class="pictos" style="font-weight:normal; font-size:14px;float:left;width:35px;height:38px;border-left:1px solid {color:post controls border};text-align:center;">
-                <div style="margin-top:9px;cursor:pointer;" class="share"><a style="font-size:14px;font-weight:500;"  target="_blank">&</a>     
-                <div class="sharethis">
-                <div class="share_short">
-                <a href="{ShortURL}">{ShortURL}</a>
-                </div>
-                <a href="http://pinterest.com/pin/create/button/?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div class="share_pin share_block">l</div></a>
-                
-                <a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"  href="http://www.facebook.com/share.php?u=\{Permalink}"><div class="share_fb share_block">f</div></a>
-                
-                
-                                            <a  href="http://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="share_twit share_block">l</div></a>
-                                            
-                                    <a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">        <div class="share_ggl share_block">g</div></a>
-                                        </div>
-                
-                
-                </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        {/block:ifShowPostControls}
-        
-    {/block:IndexPage}
 {/block:Chat}
-
-
-
-
 
 
 {block:Audio}
@@ -2784,79 +2272,7 @@ font-weight:normal;
         {/block:Caption}
     
     </div>
-     {block:IfShowTags}
-        
-        {block:HasTags}
-        <div class="post_tags_photo">
-                    
-                        {block:Tags}
-                            
-                                <a href="{TagURL}">#{Tag}</a>  
-                            
-                        {/block:Tags}
-                  
-                    </div>
-                {/block:HasTags}
-        
-        {/block:IfShowTags}
-    
-    {block:IndexPage}
-         
-        {block:ifShowPostControls}
-        <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
-        <div class="permalink_links2">
-            <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
-            
-            <div class="right">
-                <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
-                
-                <div style="margin-top:9px">
-                
-                <a target="_blank" title="{NoteCountWithLabel}" class="pictos reblog_icon2" style="font-size:14px;font-weight:500;" href="{ReblogURL}">1</a></div></div>
-                
-                <div class="pictos heart" style="font-weight:normal;font-size:14px;float:left;border-left:1px solid {color:post controls border};width:35px;height:38px;text-align:center;">
-                
-                <div style="margin-top:11px;" class="heart_icon2">
-                {LikeButton color="grey" size="14"}
-                <!--a style="text-transform:lowercase;font-size:14px;font-weight:500;" class="pictos heart_icon2" href="javascript:void(0);" rel="{ReblogURL}" id="{PostID}">k</a--></div>
-                    
-                    
-                </div>
-                
-                
-                
-                <div class="pictos" style="font-weight:normal; font-size:14px;float:left;width:35px;height:38px;border-left:1px solid {color:post controls border};text-align:center;">
-                <div style="margin-top:9px;cursor:pointer;" class="share"><a style="font-size:14px;font-weight:500;"  target="_blank">&</a>     
-                <div class="sharethis">
-                <div class="share_short">
-                <a href="{ShortURL}">{ShortURL}</a>
-                </div>
-                <a href="http://pinterest.com/pin/create/button/?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div class="share_pin share_block">l</div></a>
-                
-                <a onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"  href="http://www.facebook.com/share.php?u=\{Permalink}"><div class="share_fb share_block">f</div></a>
-                
-                
-                                            <a  href="http://twitter.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=280,width=600');return false;"><div class="share_twit share_block">l</div></a>
-                                            
-                                    <a href="https://plus.google.com/share?url={Permalink}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">        <div class="share_ggl share_block">g</div></a>
-                                        </div>
-                
-                
-                </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        {/block:ifShowPostControls}
-        
-    {/block:IndexPage}
 {/block:Audio}
-
-
-
-
 
 
 {block:Video}
@@ -2890,7 +2306,11 @@ font-weight:normal;
             </div>
             {/block:Caption}
         {/block:IfShowcaptionsonhomepage}
-        {/block:IndexPage}    
+        {/block:IndexPage}
+{/block:Video}
+
+
+
         {block:IfShowTags}
         
         {block:HasTags}
@@ -2961,7 +2381,6 @@ font-weight:normal;
         {/block:ifShowPostControls}
         
     {/block:IndexPage}
-{/block:Video}
 
 
 {block:PermalinkPage}

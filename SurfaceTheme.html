@@ -2329,6 +2329,24 @@ font-weight:normal;
             {block:Caption} 
                 <div class="caption padding tc_caption_bubble_display">
                     {Caption}
+                <div style="display:none">
+                                    {block:ContentSource}
+                        {block:ifDisplayOriginalSource}
+                            <div class="date">
+                                <a href="{SourceURL}">Source</a>
+                            </div>
+                        {/block:ifDisplayOriginalSource}
+                    {/block:ContentSource}
+                    {block:RebloggedFrom}
+                        {block:ifDisplayReblogSource}
+                            <div class="date">
+                                <a href="{ReblogParentURL}">Via {ReblogParentName}</a>
+                            </div>
+                        {/block:ifDisplayReblogSource}
+                    {/block:RebloggedFrom}
+                </div>
+
+
                 </div>
             {/block:Caption}
         {/block:IfShowcaptionsonhomepage}

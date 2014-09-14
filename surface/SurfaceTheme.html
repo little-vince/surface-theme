@@ -2114,6 +2114,7 @@ font-weight:normal;
             {block:Caption} 
                 <div class="caption padding tc_caption_bubble_display">
                     {Caption}
+                <!-- DODGY HACK TO REMOVE SOURCE -->
                 <div style="display:none">
                                     {block:ContentSource}
                         {block:ifDisplayOriginalSource}
@@ -2392,7 +2393,7 @@ font-weight:normal;
             <p><span class="pictos likeheart">k</span>{NoteCountWithLabel}</p>
         </div>
         <div class="perma_tab_25">
-            <a class="source"href="{block:ContentSource}{SourceURL}{/block:ContentSource}"><p><span class="pictos">1</span>source</p></a>
+            <a title="{Source Title}" class="source" href="{block:ContentSource}{SourceURL}{/block:ContentSource}"><p><span class="pictos">1</span>source</p></a>
         </div>
         <div class="perma_tab_25" style="border-right:none;width:175px;">
             <div style="cursor:pointer;" class="share">

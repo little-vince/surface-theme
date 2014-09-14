@@ -2334,7 +2334,7 @@ font-weight:normal;
         <div class="splitter_line" style="border-top:1px solid {color:post controls border};"></div>
         <div class="permalink_links2">
             <div class="pictos time" style="font-weight:500; padding-left: 12px; font-size:12px;float:left;">
-            <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
+                <div style="margin-top:9px;margin-left:5px;float:left;">{block:ifnotshownotecount}t{/block:ifnotshownotecount}{block:ifshownotecount}k{/block:ifshownotecount}</div></div><div style="float:left; margin-top:8px;cursor:pointer;"><a  style=" padding-left:{block:ifnotshownotecount}3px{block:ifnotshownotecount}{block:ifshownotecount}7px{/block:ifshownotecount};font-size:10px;" href="{Permalink}" title="{block:RebloggedFrom}Reblogged from {ReblogParentName}{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}">{block:ifnotshownotecount} {TimeAgo}{/block:ifnotshownotecount}{block:ifshownotecount} {NoteCountWithLabel}{/block:ifshownotecount}</a></div>
             
             <div class="right">
                 <div class="pictos" style="font-weight:500; font-size:14px;border-left:1px solid {color:post controls border};float:left;width:35px;height:38px;text-align:center;" >
@@ -2386,7 +2386,7 @@ font-weight:normal;
 {block:PermalinkPage}
     <div style="width:100%;height:40px;">
         <div class="perma_tab_25">
-            <a class="source" href="/day/{Year}/{MonthNumber}/{DayOfMonth}" title="{block:RebloggedFrom}Reblogged{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}"><p><span class="pictos">t</span>{TimeAgo}</p></a>
+            <a class="source" href="/day/{Year}/{MonthNumber}/{DayOfMonth}" title="{block:RebloggedFrom}Reblogged from {ReblogParentName}{/block:RebloggedFrom}{block:NotReblog}Posted{/block:NotReblog} on {ShortDayOfWeek} {DayOfMonthWithZero} {ShortMonth} {Year} at {12Hour}:{Minutes}{AmPm}"><p><span class="pictos">t</span>{TimeAgo}</p></a>
         </div>
         <div class="perma_tab_25">
             <p><span class="pictos likeheart">k</span>{NoteCountWithLabel}</p>

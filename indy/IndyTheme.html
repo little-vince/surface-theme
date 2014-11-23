@@ -78,6 +78,8 @@
     <meta name="text:Flickr link" content=""/>
     <meta name="text:Google Analytics ID" content=""/>
     <meta name="text:Extra Scripts" content=""/>
+
+    <meta name="if:Show Tags On Permalink Only" content="1"/>
     {/block:Hidden}
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/vexeq8y/HNUn8alvu/master.css">
     <!--[if lte IE 9]>
@@ -115,6 +117,15 @@
         margin: 0 auto 20px;
         width: 128px;
         height: auto;
+    }
+
+    div.post-content span.tags {
+    {block:IfShowTagsOnPermalinkOnly}
+        display: none;
+    {block:PermalinkPage}
+        display: block !important;
+    {/block:PermalinkPage}
+    {block:IfShowTagsOnPermalinkOnly}
     }
 
     {CustomCSS}

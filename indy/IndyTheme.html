@@ -79,6 +79,7 @@
     <meta name="text:Google Analytics ID" content=""/>
     <meta name="text:Extra Scripts" content=""/>
 
+    <meta name="if:Show Date On Posts" content="1"/>
     <meta name="if:Show Tags On Permalink Only" content="1"/>
     {/block:Hidden}
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/vexeq8y/HNUn8alvu/master.css">
@@ -379,7 +380,12 @@
                             {/block:ContentSource}
                             <div class="date">
                                 {block:Date}
-                                <a href="{Permalink}">{ShortMonth} {DayOfMonthWithZero}, {Year}</a>
+                                {block:IfShowDateOnPosts}
+                                <a href="{Permalink}" title="{TimeAgo}">{ShortMonth} {DayOfMonthWithZero}, {Year}</a>
+                                {/block:IfShowDateOnPosts}
+                                {block:IfNotShowDateOnPosts}
+                                <a href="{Permalink}" title="{ShortMonth} {DayOfMonthWithZero}, {Year}">{TimeAgo}</a>
+                                {/block:IfNotShowDateOnPosts}
                                 {/block:Date}
                             </div>
                         </div>

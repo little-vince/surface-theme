@@ -119,14 +119,14 @@
         height: auto;
     }
 
-    div.post-content span.tags {
     {block:IfShowTagsOnPermalinkOnly}
+    div.post-content span.tags {
         display: none;
     {block:PermalinkPage}
         display: block !important;
     {/block:PermalinkPage}
-    {block:IfShowTagsOnPermalinkOnly}
     }
+    {/block:IfShowTagsOnPermalinkOnly}
 
     .normal img {
         border-radius: 0 !important;

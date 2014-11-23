@@ -400,11 +400,20 @@
     </div>
     <!-- END PUSHER -->
 </div>
+<script src="http://static.tumblr.com/vexeq8y/W89n6cmf3/jquery.min.js"></script>
 <script>
     var wordClose = "{lang:Close}";
     var wordLoading = "{lang:Loading}";
+
+    //infinite scroll
+    {block:IndexPage}
+    $(window).scroll(function() {
+        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+            $("a.load-more").click();
+        }
+    });
+    {/block:IndexPage}
 </script>
-<script src="http://static.tumblr.com/vexeq8y/W89n6cmf3/jquery.min.js"></script>
 <script src="http://static.tumblr.com/vexeq8y/jMYn7yfzp/plugins.min.js"></script>
 <script src="http://static.tumblr.com/vexeq8y/gbMn9r6pu/app.js"></script>
 {block:IfGoogleAnalyticsID}

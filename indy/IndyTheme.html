@@ -99,6 +99,24 @@
     .menu-icon span, .menu-icon span:before, .menu-icon span:after {background-color: {color:Menu Bar Text Color};}
     .grid article.logo h1 a, .grid article.logo h2  {color: {TitleColor};}
     .pace .pace-progress {background: {color:Menu Bar Text Color};}
+
+    .header {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 75px;
+    }
+
+    .header.logo-circle img {
+        border-radius: 50%;
+    }
+
+    .header.logo img {
+        margin: 0 auto 20px;
+        width: 128px;
+        height: auto;
+    }
+
     {CustomCSS}
     </style>
     <script src="http://static.tumblr.com/vexeq8y/LnVn6cmfh/plugins-top.js" async></script>
@@ -182,8 +200,7 @@
             </div>
         </nav>
         <div id="content-wrapper">
-            <div class="grid{block:IndexPage} {select:Layout Type}{/block:IndexPage}{block:SearchPage} one-col{/block:SearchPage}{block:PermalinkPage} permapage{/block:PermalinkPage}{block:SearchPage} searchpage{/block:SearchPage}">
-                <article class="logo logo-{AvatarShape}">
+            <div class="header logo logo-{AvatarShape}">
                     {block:ShowAvatar}<a href="/"><img src="{PortraitURL-128}" alt="{Title}"></a>{/block:ShowAvatar}
                     {block:ShowTitle}
                     <h1><a href="/">{block:IfBoldTitle}<strong>{/block:IfBoldTitle}{Title}{block:IfBoldTitle}</strong>{/block:IfBoldTitle}</a></h1>
@@ -197,7 +214,8 @@
                     {block:SearchPage}<h2 class="search-results {block:NoSearchResults}hide{/block:NoSearchResults}">{lang:Search results for SearchQuery 2}</h2>{/block:SearchPage}
                     {block:NoSearchResults}<h2 class="search-results">{lang:Sorry no posts found}</h2>{/block:NoSearchResults}
                     {/block:IndexPage}
-                </article>
+            </div> <!-- end header-->
+            <div class="grid{block:IndexPage} {select:Layout Type}{/block:IndexPage}{block:SearchPage} one-col{/block:SearchPage}{block:PermalinkPage} permapage{/block:PermalinkPage}{block:SearchPage} searchpage{/block:SearchPage}">
                 <div class="init-posts"> 
                 {block:Posts}
                     {block:Text}

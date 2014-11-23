@@ -359,6 +359,10 @@
                                     <a href="https://plus.google.com/share?url={URLEncodedPermalink}" target="_blank" class="icon-googleplus" aria-hidden="true" data-icon="&#x47;"></a>
                                 </div>
                             </div>
+                            <!-- TODO: work out how to use icomoon and find a nice icon for content source -->
+                            {block:ContentSource}
+                            <a href="{SourceURL}" style="display:none" target="_blank" aria-hidden="true" data-icon="&#169;"{block:RebloggedFrom} title="via {ReblogParentName}"{/block:RebloggedFrom}></a>
+                            {/block:ContentSource}
                             <div class="date">
                                 {block:Date}
                                 <a href="{Permalink}">{ShortMonth} {DayOfMonthWithZero}, {Year}</a>

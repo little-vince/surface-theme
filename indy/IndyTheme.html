@@ -94,7 +94,7 @@
     {block:IfBackgroundImageImage}
     #bg {position:fixed; top: 0px; width:100%; height:100%; background: url('{image:Background Image}') center center no-repeat; background-size: cover;}
     {/block:IfBackgroundImageImage}
-    a, a:active, cite {color: {AccentColor};}
+    a, a:active {color: {AccentColor};}
     .post-link .link h2 {color: #fff; background: {AccentColor};}
     .top-bar { {block:IfNotTransparentMenuBar}background: {color:Menu Bar Background}{/block:IfNotTransparentMenuBar}{block:IfTransparentMenuBar} background: rgba(0,0,0,0); {/block:IfTransparentMenuBar};}
     .top-bar .top-title h1 a, .menu-icon .title {color: {color:Menu Bar Text Color};}
@@ -277,7 +277,7 @@
                     <article class="post-qoute" id="{PostID}">
                         <div class="post-content">
                             <blockquote>"{Quote}"</blockquote>
-                        {block:Source}<cite>- {Source}</cite>{/block:Source}
+                        {block:Source}<p><cite>- {Source}</cite></p>{/block:Source}
                     {/block:Quote}
                     {block:Link}
                     <article class="post-link" id="{PostID}">

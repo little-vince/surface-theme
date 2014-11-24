@@ -425,6 +425,7 @@
     <!-- END PUSHER -->
 </div>
 <script src="http://static.tumblr.com/vexeq8y/W89n6cmf3/jquery.min.js"></script>
+<!--script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script-->
 <script>
     var wordClose = "{lang:Close}";
     var wordLoading = "{lang:Loading}";
@@ -437,6 +438,34 @@
         }
     });
     {/block:IndexPage}
+
+    /*
+    //TODO: Work out why enabling the following code screws up the search bar on mobile devices
+    //swipe left and right to open/close menu
+    var b = $("#container"),
+        c = $("#trigger-menu"),
+        d = $("#trigger-menu .title");
+    $(document).on('pageinit', function(){
+        //left to right
+        b.on("swiperight", function(){
+            //open the menu
+            if (!b.hasClass("menu-open")) {
+                d.text(wordClose);
+                b.toggleClass("menu-open");
+                c.toggleClass("active");
+            }
+        });
+        //right to left
+        b.on("swipeleft", function(){
+            //close the menu
+            if (b.hasClass("menu-open")) {
+                d.text("menu");
+                b.toggleClass("menu-open");
+                c.toggleClass("active");
+            }
+        });
+    });
+    */
 </script>
 <script src="http://static.tumblr.com/vexeq8y/jMYn7yfzp/plugins.min.js"></script>
 <script src="http://static.tumblr.com/vexeq8y/gbMn9r6pu/app.js"></script>

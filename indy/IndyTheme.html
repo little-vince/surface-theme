@@ -434,13 +434,17 @@
     var wordClose = "{lang:Close}";
     var wordLoading = "{lang:Loading}";
 
-    //infinite scroll
+    //infinite scroll on home page only
     {block:IndexPage}
+    {block:TagPage}/*{/block:TagPage}
+    {block:SearchPage}/*{/block:SearchPage}
     $(window).scroll(function() {
         if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
             $("a.load-more").click();
         }
     });
+    {block:SearchPage}*/{/block:SearchPage}
+    {block:TagPage}*/{/block:TagPage}
     {/block:IndexPage}
 
     /*

@@ -5,11 +5,12 @@ Here are my improvements and customisations to existing Tumblr themes.
 
 Surface
 -------
-This is an improved version of the [Surface Tumblr 
-Theme](http://theme-cloud.co/themes/blinkanditsover/surface/) originally by 
-[blinkanditsover](http://theme-cloud.co/themes/blinkanditsover/).
+Main improvements to 
+[Surface](http://theme-cloud.co/themes/blinkanditsover/surface/)
+ by 
+[blinkanditsover](http://theme-cloud.co/themes/blinkanditsover/)
+are:
 
-The main improvements are as follows:
 * fixed like button
 * fixed mobile website not taking affect
 * made top header bar dynamic instead of fixed
@@ -17,4 +18,14 @@ The main improvements are as follows:
 
 Indy
 ----
-[Indy](https://www.tumblr.com/theme/38922) by [safeasmilkco](http://safeasmilk.co/).
+Main improvements to
+[Indy](https://www.tumblr.com/theme/38922)
+ by 
+[safeasmilkco](http://safeasmilk.co/)
+are:
+
+* seamless menu bar
+* fully transparent menu
+* non-post-like title block
+* infinite-scrolling homepage
+

@@ -452,9 +452,11 @@
     {block:TagPage}/*{/block:TagPage}
     {block:SearchPage}/*{/block:SearchPage}
     $(window).scroll(function() {
-        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+        var b = $(window).scrollTop() + $(window).height() >= $(document).height();
+        if (b) {
             $("a.load-more").click();
         }
+        b = false;
     });
     {block:SearchPage}*/{/block:SearchPage}
     {block:TagPage}*/{/block:TagPage}

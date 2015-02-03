@@ -398,10 +398,10 @@
                             <div class="date">
                                 {block:Date}
                                 {block:IfShowDateOnPosts}
-                                <a href="{Permalink}" title="{TimeAgo}">{ShortMonth} {DayOfMonthWithZero}, {Year}</a>
+                                <a href="{Permalink}" title="{TimeAgo} on a {DayOfWeek} at {12Hour}{AmPm}">{ShortMonth} {DayOfMonthWithZero}, {Year}</a>
                                 {/block:IfShowDateOnPosts}
                                 {block:IfNotShowDateOnPosts}
-                                <a href="{Permalink}" title="{ShortMonth} {DayOfMonthWithZero}, {Year}">{TimeAgo}</a>
+                                <a href="{Permalink}" title="{ShortDayOfWeek} {12Hour}{AmPm}, {ShortMonth} {DayOfMonthWithZero}, {Year}">{TimeAgo}</a>
                                 {/block:IfNotShowDateOnPosts}
                                 {/block:Date}
                             </div>

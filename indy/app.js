@@ -168,6 +168,7 @@ $(document).ready(function() {
     (function() {
         $(window).unbind(".infscr");
       $(".load-more").click(function(a) {
+            if ($(".spinner").is(":visible")) return;
             b.infinitescroll("retrieve");
             a.preventDefault()
         })

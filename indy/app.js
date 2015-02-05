@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    //define functions
     function h() {
         b.masonry({
             itemSelector: "article",
@@ -73,6 +74,26 @@ $(document).ready(function() {
     function l() {
         $(".bottom-nav").addClass("infinite-off")
     }
+
+    function quotesize() {
+        $(".post-qoute blockquote").each(function(index) {
+            var $numWords = $(this).text().split(" ").length;
+            if (($numWords >= 1) && ($numWords < 20)) {
+                $(this).css("font-size", "1.6em");
+            }
+            else if (($numWords >= 20) && ($numWords < 40)) {
+                $(this).css("font-size", "1.4em");
+            }
+            else if (($numWords >= 40) && ($numWords < 60)) {
+                $(this).css("font-size", "1.2em");
+            }
+            else {
+                $(this).css("font-size", "1.0em");
+            }    
+        });
+    }
+
+    //execute functions
     var b = $(".grid");
     $(".grid article");
     var m = $(window).height(),
@@ -93,19 +114,23 @@ $(document).ready(function() {
             b.hasClass("menu-open") && (a(), c.removeClass("active"), b.removeClass("menu-open"))
         })
     })();
+
     (function(a) {
         0 !==
             $("#" + a).length && $(".post-content").contents().filter(function() {
                 return 3 === this.nodeType
             }).wrap("<p>")
     })("submit_form");
+
     $("p:empty").remove();
+
     (function() {
         b.on("click", ".js-share", function(a) {
             $(this).closest(".share-wrap").toggleClass("active");
             a.preventDefault()
         })
     })();
+
     f();
     e();
     $(".grid").hasClass("permapage") || $(".grid").hasClass("searchpage") || h();
@@ -115,11 +140,14 @@ $(document).ready(function() {
     d();
     $("iframe").is("#submit_form") ? $(".actions").hide() : $("iframe").is("#ask_form") && $(".actions").hide();
     $(".like_button")[0] ? $(".grid").removeClass("page") : $(".grid").addClass("page");
+    quotesize();
+
     (function() {
         $(window).load(function() {
             $(".pusher").css("min-height", m)
         })
     })();
+
     (function() {
         $(".scroll-top").click(function(a) {
             $("body,html").animate({
@@ -128,6 +156,7 @@ $(document).ready(function() {
             a.preventDefault()
         })
     })();
+
     (function() {
         b.infinitescroll({
                 navSelector: ".pagination",
@@ -162,9 +191,11 @@ $(document).ready(function() {
                 d();
                 $("p:empty").remove();
                 g();
-                b.masonry()
+                b.masonry();
+                quotesize()
             })
     })();
+
     (function() {
         $(window).unbind(".infscr");
         $(".load-more").click(function(a) {
@@ -172,5 +203,6 @@ $(document).ready(function() {
             a.preventDefault()
         })
     })();
+
     FastClick.attach(document.body)
 });

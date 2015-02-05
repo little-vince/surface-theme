@@ -77,18 +77,13 @@ $(document).ready(function() {
 
     function quotesize() {
         $(".post-qoute blockquote.raw").each(function() {
-            var $numWords = $(this).text().split(" ").length;
-            if (($numWords >= 1) && ($numWords < 20)) {
-                $(this).css("font-size", "1.6em");
-            }
-            else if (($numWords >= 20) && ($numWords < 40)) {
-                $(this).css("font-size", "1.4em");
-            }
-            else if (($numWords >= 40) && ($numWords < 60)) {
-                $(this).css("font-size", "1.2em");
-            }
-            else {
+            var $words = $(this).text().split(" ").length;
+            if ($words > 60) {
                 $(this).css("font-size", "1.0em");
+            } else if ($words > 40) {
+                $(this).css("font-size", "1.2em");
+            } else if ($words > 20) {
+                $(this).css("font-size", "1.4em");
             }
             $(this).removeClass("raw");
         });

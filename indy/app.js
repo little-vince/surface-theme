@@ -132,6 +132,7 @@ $(document).ready(function() {
         })
     })();
 
+    quotesize();
     f();
     e();
     $(".grid").hasClass("permapage") || $(".grid").hasClass("searchpage") || h();
@@ -141,7 +142,6 @@ $(document).ready(function() {
     d();
     $("iframe").is("#submit_form") ? $(".actions").hide() : $("iframe").is("#ask_form") && $(".actions").hide();
     $(".like_button")[0] ? $(".grid").removeClass("page") : $(".grid").addClass("page");
-    quotesize();
 
     (function() {
         $(window).load(function() {
@@ -187,13 +187,13 @@ $(document).ready(function() {
                     b.masonry()
                 });
                 a.find(".photo-slideshow").pxuPhotoset();
+                quotesize();
                 e();
                 f();
                 d();
                 $("p:empty").remove();
                 g();
                 b.masonry();
-                quotesize()
             })
     })();
 

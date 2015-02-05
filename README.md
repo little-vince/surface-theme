@@ -28,4 +28,5 @@ are:
 * fully transparent menu
 * non-post-like title block
 * infinite-scrolling homepage
+* dynamically sized quotes (like dashboard)
 

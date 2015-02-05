@@ -76,7 +76,7 @@ $(document).ready(function() {
     }
 
     function quotesize() {
-        $(".post-qoute blockquote").each(function(index) {
+        $(".post-qoute blockquote.raw").each(function() {
             var $numWords = $(this).text().split(" ").length;
             if (($numWords >= 1) && ($numWords < 20)) {
                 $(this).css("font-size", "1.6em");
@@ -89,7 +89,8 @@ $(document).ready(function() {
             }
             else {
                 $(this).css("font-size", "1.0em");
-            }    
+            }
+            $(this).removeClass("raw");
         });
     }
 

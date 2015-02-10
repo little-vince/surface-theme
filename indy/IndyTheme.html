@@ -81,6 +81,7 @@
 
     <meta name="if:Show Date On Posts" content="1"/>
     <meta name="if:Show Tags On Permalink Only" content="1"/>
+    <meta name="if:Lowercase Menu" content="1"/>
     {/block:Hidden}
     <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/vexeq8y/HNUn8alvu/master.css">
     <!--[if lte IE 9]>
@@ -142,6 +143,10 @@
         background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.7) !important;
         margin-top: 0 !important;
         padding-top: 50px !important;
+        overflow: hidden;
+        {block:IfLowercaseMenu}
+        text-transform: lowercase;
+        {/block:IfLowercaseMenu}
     }
 
     .menu-open .active .title {

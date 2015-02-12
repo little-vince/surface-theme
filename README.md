@@ -29,4 +29,5 @@ are:
 * non-post-like title block
 * infinite-scrolling homepage
 * dynamically sized quotes (like dashboard)
+* option to only show tags on permalink page
 

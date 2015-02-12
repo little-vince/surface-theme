@@ -91,7 +91,7 @@ $(document).ready(function() {
 
     function removeblank() {
         $(".post-photo, .post-photoset").each(function() {
-            if ($(this).find("p").is(":visible")) {
+            if (!$(this).find("p").is(":visible")) {
                 $(this).find("hr").css("visibility", "hidden");
                 $(this).find(".actions").css("margin-top", "-16px");
             }

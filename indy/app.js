@@ -89,6 +89,15 @@ $(document).ready(function() {
         });
     }
 
+    function removeblank() {
+        $(".post-photo, .post-photoset").each(function() {
+            if ($(this).find("p").is(":visible")) {
+                $(this).find("hr").css("visibility", "hidden");
+                $(this).find(".actions").css("margin-top", "-16px");
+            }
+        });
+    }
+
     //execute functions
     var b = $(".grid");
     $(".grid article");
@@ -127,6 +136,7 @@ $(document).ready(function() {
         })
     })();
 
+    removeblank();
     quotesize();
     f();
     e();
@@ -182,6 +192,7 @@ $(document).ready(function() {
                     b.masonry()
                 });
                 a.find(".photo-slideshow").pxuPhotoset();
+                removeblank();
                 quotesize();
                 e();
                 f();

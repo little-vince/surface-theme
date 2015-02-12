@@ -95,8 +95,8 @@ $(document).ready(function() {
         $(".post-photo .actions.raw, .post-photoset .actions.raw").each(function() {
             if (!$(this).siblings(".caption").length && !$(this).siblings(".tags").is(":visible")) {
                 $(this).css("margin-top", "-16px").children("hr").css("visibility", "hidden");
-                $(this).removeClass("raw");
             }
+            $(this).removeClass("raw");
         });
     }
 

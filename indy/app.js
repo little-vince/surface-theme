@@ -75,6 +75,7 @@ $(document).ready(function() {
         $(".bottom-nav").addClass("infinite-off")
     }
 
+    //change the quote font size depending on quote wordcount
     function quotesize() {
         $(".post-qoute blockquote.raw").each(function() {
             var $words = $(this).text().split(" ").length;
@@ -89,6 +90,7 @@ $(document).ready(function() {
         });
     }
 
+    //if photo(set) has no description hide the blank space
     function removeblank() {
         $(".post-photo, .post-photoset").each(function() {
             if (!$(this).find("p").is(":visible")) {

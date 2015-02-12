@@ -92,10 +92,9 @@ $(document).ready(function() {
 
     //if photo(set) has no description hide the blank space
     function removeblank() {
-        $(".post-photo, .post-photoset").each(function() {
-            if (!$(this).find("p").is(":visible")) {
-                $(this).find("hr").css("visibility", "hidden");
-                $(this).find(".actions").css("margin-top", "-16px");
+        $(".post-photo .actions, .post-photoset .actions").each(function() {
+            if (!$(this).siblings(".caption").length) {
+                $(this).css("margin-top", "-16px").children("hr").css("visibility", "hidden");
             }
         });
     }

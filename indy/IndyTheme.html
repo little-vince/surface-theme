@@ -286,7 +286,7 @@
                         <div class="post-content">
                         {block:IndexPage}<a href="{Permalink}"><img src="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>{/block:IndexPage}
                         {block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}{/block:PermalinkPage}
-                        {block:Caption}<p>{Caption}</p>{/block:Caption}
+                        {block:Caption}<div class="caption"><p>{Caption}</p></div>{/block:Caption}
                     {/block:Photo}  
                     {block:Photoset}
                     <article class="post-photoset" id="{PostID}">
@@ -302,13 +302,13 @@
                                 </div>
                               {/block:Photos}
                             </div>
-                        {block:Caption}<p>{Caption}</p>{/block:Caption}
+                            {block:Caption}<div class="caption"><p>{Caption}</p></div>{/block:Caption}
                     {/block:Photoset}
                     {block:Panorama}
                     <article class="post-panorama" id="{PostID}">
                         <div class="post-content">
                         {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
-                        {block:Caption}{Caption}{/block:Caption}
+                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
                     {/block:Panorama}
                     {block:Quote}
                     <article class="post-qoute" id="{PostID}">
@@ -341,13 +341,13 @@
                         {block:TrackName}<a href="{Permalink}"><h2>{TrackName}</h2></a>{/block:TrackName}
                         {block:AlbumArt}<img src="{AlbumArtURL}"/>{/block:AlbumArt}
                         {AudioEmbed-400}
-                        {block:Caption}<p>{Caption}</p>{/block:Caption}
+                        {block:Caption}<div class="caption"><p>{Caption}</p></div>{/block:Caption}
                     {/block:Audio}
                     {block:Video}
                     <article class="post-video" id="{PostID}">
                         <div class="post-content">
                             <div class="video-player">{Video-500}</div>
-                        {block:Caption}<p>{Caption}</p>{/block:Caption}
+                            {block:Caption}<div class="caption"><p>{Caption}</p></div>{/block:Caption}
                      {/block:Video}
                     {block:Answer}
                     <article class="post-answer" id="{PostID}">
